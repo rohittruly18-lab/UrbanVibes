@@ -2,31 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MensHub Clothing - Thank You</title>
+  <title>Urban Vibes Clothing - Thank You</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="main-header">
-    <div class="logo">MensHub</div>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      ☰
-    </button>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="payment.html">Payment</a></li>
-      </ul>
-    </nav>
+    <a href="index.html" class="logo">MensHub</a>
+    <a href="payment.html" class="cart-indicator">
+      🛒 Cart <span id="cart-count">0</span>
+    </a>
   </header>
 
   <main class="section center-content">
     <div class="thankyou-card">
       <h1>Thank You for Your Order!</h1>
       <p>
-        Your order has been placed successfully. We’ve sent a confirmation
-        email with your order details.
+        Your order has been placed successfully. A confirmation email will be
+        sent to you shortly.
       </p>
       <a href="index.html" class="btn btn-primary">Back to Home</a>
       <a href="products.html" class="btn btn-outline">Continue Shopping</a>
@@ -38,17 +31,19 @@
   </footer>
 
   <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    // Clear cart after successful order
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const cartCountEl = document.getElementById('cart-count');
+      if (cartCountEl) cartCountEl.textContent = count;
+    }
 
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("nav-open");
+    document.addEventListener('DOMContentLoaded', () => {
+      // Clear cart
+      localStorage.removeItem('cart');
+      updateCartCount();
     });
-
-    // Optional auto-redirect to home after 5 seconds
-    // setTimeout(() => {
-    //   window.location.href = "index.html";
-    // }, 5000);
   </script>
 </body>
 </html>
