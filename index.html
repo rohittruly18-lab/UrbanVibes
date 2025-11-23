@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MensHub Clothing - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">MensHub</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="payment.html">Payment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>All Men’s Clothing — From Basic to Advanced</h1>
+        <p>
+          Explore everything from everyday essentials like t-shirts and jeans
+          to premium hoodies, shirts, trousers, baggy pants and more.
+        </p>
+        <a href="products.html" class="btn btn-primary">Shop All Products</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
+          alt="Men's fashion collection"
+        />
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="section">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="grid grid-4">
+        <article class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
+            alt="T-shirt"
+          />
+          <h3>Basic T-Shirts</h3>
+          <p>Comfortable cotton tees for everyday wear.</p>
+        </article>
+
+        <article class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
+            alt="Hoodie"
+          />
+          <h3>Hoodies & Sweatshirts</h3>
+          <p>Stay cozy with premium fleece and oversized fits.</p>
+        </article>
+
+        <article class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1528701800489-20be3c30c1d5?auto=format&fit=crop&w=600&q=80"
+            alt="Shirt"
+          />
+          <h3>Formal & Casual Shirts</h3>
+          <p>From office-ready to weekend casual styles.</p>
+        </article>
+
+        <article class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
+            alt="Jeans and pants"
+          />
+          <h3>Jeans & Baggy Pants</h3>
+          <p>Skinny, straight, relaxed and baggy fits.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT SECTION -->
+    <section class="section highlight">
+      <div class="highlight-content">
+        <h2>Curated Fits for Every Occasion</h2>
+        <p>
+          Whether you’re heading to college, work, a date, or a night out,
+          we’ve got a complete range of outfits to match your vibe.
+        </p>
+        <ul class="highlight-list">
+          <li>Basic everyday t-shirts & joggers</li>
+          <li>Smart casual shirts & chinos</li>
+          <li>Street-style hoodies & baggy pants</li>
+          <li>Premium denim and layered looks</li>
+        </ul>
+        <a href="products.html" class="btn btn-outline">Browse Full Collection</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 MensHub Clothing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  </script>
+</body>
+</html>
