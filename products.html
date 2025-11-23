@@ -8,26 +8,19 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="logo">MensHub</div>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      ☰
-    </button>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="payment.html">Payment</a></li>
-      </ul>
-    </nav>
+    <a href="index.html" class="logo">MensHub</a>
+    <a href="payment.html" class="cart-indicator">
+      🛒 Cart <span id="cart-count">0</span>
+    </a>
   </header>
 
   <main class="section">
     <div class="section-header">
       <h1 class="section-title">All Men’s Clothing</h1>
-      <p>Browse basics to advanced premium wear in one place.</p>
+      <p>Select items and add them to your cart, then proceed to payment.</p>
     </div>
 
-    <!-- FILTERS (just visual for now) -->
+    <!-- Just visual filters -->
     <div class="filters">
       <select>
         <option>All Categories</option>
@@ -53,7 +46,18 @@
         <h3>Classic White T-Shirt</h3>
         <p class="product-category">Basic T-Shirt</p>
         <p class="product-price">₹499</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Classic White T-Shirt"
+                  data-price="499">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Classic White T-Shirt"
+                  data-price="499">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <article class="product-card">
@@ -64,7 +68,18 @@
         <h3>Oversized Graphic Tee</h3>
         <p class="product-category">Streetwear T-Shirt</p>
         <p class="product-price">₹799</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Oversized Graphic Tee"
+                  data-price="799">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Oversized Graphic Tee"
+                  data-price="799">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <!-- HOODIES -->
@@ -76,18 +91,40 @@
         <h3>Premium Fleece Hoodie</h3>
         <p class="product-category">Hoodie</p>
         <p class="product-price">₹1,499</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Premium Fleece Hoodie"
+                  data-price="1499">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Premium Fleece Hoodie"
+                  data-price="1499">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <article class="product-card">
         <img
           src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
-          alt="Zip-Up Hoodie"
+          alt="Minimal Zip-Up Hoodie"
         />
         <h3>Minimal Zip-Up Hoodie</h3>
         <p class="product-category">Hoodie</p>
         <p class="product-price">₹1,299</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Minimal Zip-Up Hoodie"
+                  data-price="1299">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Minimal Zip-Up Hoodie"
+                  data-price="1299">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <!-- SHIRTS -->
@@ -99,7 +136,18 @@
         <h3>Formal Blue Shirt</h3>
         <p class="product-category">Formal Shirt</p>
         <p class="product-price">₹1,199</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Formal Blue Shirt"
+                  data-price="1199">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Formal Blue Shirt"
+                  data-price="1199">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <article class="product-card">
@@ -110,19 +158,41 @@
         <h3>Checked Casual Shirt</h3>
         <p class="product-category">Casual Shirt</p>
         <p class="product-price">₹999</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Checked Casual Shirt"
+                  data-price="999">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Checked Casual Shirt"
+                  data-price="999">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <!-- JEANS & PANTS -->
       <article class="product-card">
         <img
           src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
-          alt="Slim Fit Jeans"
+          alt="Slim Fit Denim Jeans"
         />
         <h3>Slim Fit Denim Jeans</h3>
         <p class="product-category">Jeans</p>
         <p class="product-price">₹1,699</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Slim Fit Denim Jeans"
+                  data-price="1699">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Slim Fit Denim Jeans"
+                  data-price="1699">
+            Buy Now
+          </button>
+        </div>
       </article>
 
       <article class="product-card">
@@ -133,7 +203,18 @@
         <h3>Baggy Cargo Pants</h3>
         <p class="product-category">Baggy Pants</p>
         <p class="product-price">₹1,599</p>
-        <a href="payment.html" class="btn btn-small">Buy Now</a>
+        <div class="product-actions">
+          <button class="btn btn-small add-to-cart"
+                  data-name="Baggy Cargo Pants"
+                  data-price="1599">
+            Add to Cart
+          </button>
+          <button class="btn btn-small btn-outline buy-now"
+                  data-name="Baggy Cargo Pants"
+                  data-price="1599">
+            Buy Now
+          </button>
+        </div>
       </article>
     </div>
   </main>
@@ -143,11 +224,60 @@
   </footer>
 
   <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    function getCart() {
+      return JSON.parse(localStorage.getItem('cart') || '[]');
+    }
 
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("nav-open");
+    function saveCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+      const cart = getCart();
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const cartCountEl = document.getElementById('cart-count');
+      if (cartCountEl) cartCountEl.textContent = count;
+    }
+
+    function addToCart(name, price) {
+      const cart = getCart();
+      const existing = cart.find(item => item.name === name);
+      const priceNumber = parseInt(price, 10);
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price: priceNumber, quantity: 1 });
+      }
+
+      saveCart(cart);
+      updateCartCount();
+      alert(`${name} added to cart.`);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount();
+
+      const addButtons = document.querySelectorAll('.add-to-cart');
+      const buyNowButtons = document.querySelectorAll('.buy-now');
+
+      addButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const name = btn.getAttribute('data-name');
+          const price = btn.getAttribute('data-price');
+          addToCart(name, price);
+        });
+      });
+
+      buyNowButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const name = btn.getAttribute('data-name');
+          const price = btn.getAttribute('data-price');
+          addToCart(name, price);
+          // Redirect directly to payment page
+          window.location.href = 'payment.html';
+        });
+      });
     });
   </script>
 </body>
