@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MensHub Clothing - Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">MensHub</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="payment.html">Payment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="section-header">
+      <h1 class="section-title">All Men’s Clothing</h1>
+      <p>Browse basics to advanced premium wear in one place.</p>
+    </div>
+
+    <!-- FILTERS (just visual for now) -->
+    <div class="filters">
+      <select>
+        <option>All Categories</option>
+        <option>T-Shirts</option>
+        <option>Hoodies</option>
+        <option>Shirts</option>
+        <option>Jeans & Pants</option>
+      </select>
+      <select>
+        <option>Sort by: Featured</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="grid grid-4 product-grid">
+      <!-- T-SHIRTS -->
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
+          alt="Classic White T-Shirt"
+        />
+        <h3>Classic White T-Shirt</h3>
+        <p class="product-category">Basic T-Shirt</p>
+        <p class="product-price">₹499</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1495121553079-4c61bcce189c?auto=format&fit=crop&w=600&q=80"
+          alt="Oversized Graphic Tee"
+        />
+        <h3>Oversized Graphic Tee</h3>
+        <p class="product-category">Streetwear T-Shirt</p>
+        <p class="product-price">₹799</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <!-- HOODIES -->
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+          alt="Premium Fleece Hoodie"
+        />
+        <h3>Premium Fleece Hoodie</h3>
+        <p class="product-category">Hoodie</p>
+        <p class="product-price">₹1,499</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+          alt="Zip-Up Hoodie"
+        />
+        <h3>Minimal Zip-Up Hoodie</h3>
+        <p class="product-category">Hoodie</p>
+        <p class="product-price">₹1,299</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <!-- SHIRTS -->
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1528701800489-20be3c30c1d5?auto=format&fit=crop&w=600&q=80"
+          alt="Formal Blue Shirt"
+        />
+        <h3>Formal Blue Shirt</h3>
+        <p class="product-category">Formal Shirt</p>
+        <p class="product-price">₹1,199</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+          alt="Checked Casual Shirt"
+        />
+        <h3>Checked Casual Shirt</h3>
+        <p class="product-category">Casual Shirt</p>
+        <p class="product-price">₹999</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <!-- JEANS & PANTS -->
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
+          alt="Slim Fit Jeans"
+        />
+        <h3>Slim Fit Denim Jeans</h3>
+        <p class="product-category">Jeans</p>
+        <p class="product-price">₹1,699</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4c?auto=format&fit=crop&w=600&q=80"
+          alt="Baggy Cargo Pants"
+        />
+        <h3>Baggy Cargo Pants</h3>
+        <p class="product-category">Baggy Pants</p>
+        <p class="product-price">₹1,599</p>
+        <a href="payment.html" class="btn btn-small">Buy Now</a>
+      </article>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 MensHub Clothing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  </script>
+</body>
+</html>
