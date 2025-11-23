@@ -2,29 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MensHub Clothing - Payment</title>
+  <title>Urban Vibes Clothing - Payment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="main-header">
-    <div class="logo">MensHub</div>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      ☰
-    </button>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="payment.html" class="active">Payment</a></li>
-      </ul>
-    </nav>
+    <a href="index.html" class="logo">MensHub</a>
+    <a href="payment.html" class="cart-indicator">
+      🛒 Cart <span id="cart-count">0</span>
+    </a>
   </header>
 
   <main class="section">
     <div class="section-header">
       <h1 class="section-title">Payment Details</h1>
-      <p>Fill in your details to complete the order.</p>
+      <p>Review your cart and fill in your details to complete the order.</p>
     </div>
 
     <div class="payment-layout">
@@ -81,28 +74,27 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary full-width">
+        <button type="submit" class="btn btn-primary full-width" id="pay-button">
           Pay & Place Order
         </button>
       </form>
 
       <aside class="order-summary">
-        <h2>Order Summary</h2>
-        <ul>
-          <li>Selected Men’s Clothing Items</li>
-          <li>Qty: 1–3 pieces (example)</li>
+        <h2>Your Cart</h2>
+        <ul id="order-items">
+          <!-- Items will be injected by JS -->
         </ul>
         <div class="summary-line">
           <span>Subtotal</span>
-          <span>₹2,999</span>
+          <span id="subtotal">₹0</span>
         </div>
         <div class="summary-line">
           <span>Shipping</span>
-          <span>₹99</span>
+          <span id="shipping">₹0</span>
         </div>
         <div class="summary-total">
           <span>Total</span>
-          <span>₹3,098</span>
+          <span id="total">₹0</span>
         </div>
       </aside>
     </div>
@@ -113,14 +105,58 @@
   </footer>
 
   <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    function getCart() {
+      return JSON.parse(localStorage.getItem('cart') || '[]');
+    }
 
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("nav-open");
+    function updateCartCount() {
+      const cart = getCart();
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const cartCountEl = document.getElementById('cart-count');
+      if (cartCountEl) cartCountEl.textContent = count;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount();
+
+      const cart = getCart();
+      const itemsContainer = document.getElementById('order-items');
+      const subtotalEl = document.getElementById('subtotal');
+      const shippingEl = document.getElementById('shipping');
+      const totalEl = document.getElementById('total');
+      const payButton = document.getElementById('pay-button');
+
+      if (cart.length === 0) {
+        itemsContainer.innerHTML =
+          '<li>Your cart is empty. <a href="products.html">Go back to products</a>.</li>';
+        subtotalEl.textContent = '₹0';
+        shippingEl.textContent = '₹0';
+        totalEl.textContent = '₹0';
+        payButton.disabled = true;
+        payButton.textContent = 'Cart is empty';
+        return;
+      }
+
+      let subtotal = 0;
+      itemsContainer.innerHTML = '';
+
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        const lineTotal = item.price * item.quantity;
+        li.textContent = `${item.name} × ${item.quantity} — ₹${lineTotal}`;
+        itemsContainer.appendChild(li);
+        subtotal += lineTotal;
+      });
+
+      const shipping = 99;
+      const total = subtotal + shipping;
+
+      subtotalEl.textContent = `₹${subtotal}`;
+      shippingEl.textContent = `₹${shipping}`;
+      totalEl.textContent = `₹${total}`;
     });
 
-    // Simple interaction: hide card details if UPI/COD is selected
+    // Show/hide card fields based on payment method
     const paymentRadios = document.querySelectorAll("input[name='payment_method']");
     const cardDetails = document.querySelector(".card-details");
 
