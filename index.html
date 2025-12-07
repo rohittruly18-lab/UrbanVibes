@@ -17,9 +17,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-J8CSGBDS0F');
 </script> -->
-  <meta charset="UTF-8" />
-  <title>Urban Vibes - HOME</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MensHub — Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -27,110 +27,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBZW92FT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <header class="main-header">
-    <!-- Logo now links to landing page -->
-    <a href="index.html" class="logo">MensHub</a>
+  <div class="container">
+    <header class="header">
+      <a class="logo" href="index.html">MensHub</a>
+      <a class="cart-indicator" href="payment.html">🛒 Cart <span id="cart-count" class="cart-count">0</span></a>
+    </header>
 
-    <!-- Cart indicator (no Products/Payment in navbar) -->
-    <a href="payment.html" class="cart-indicator">
-      🛒 Cart <span id="cart-count">0</span>
-    </a>
-  </header>
-
-  <main>
-    <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero-content">
-        <h1>All Men’s Clothing in One Place</h1>
-        <p>
-          From basic t-shirts and jeans to advanced streetwear, hoodies,
-          formal shirts and baggy pants – build your complete wardrobe here.
+      <div class="card">
+        <h1 style="margin-bottom:8px">MensHub — Clothing simplified</h1>
+        <p style="color:#bcd7f3; margin-bottom:12px">
+          Basics to advanced streetwear — t-shirts, hoodies, shirts, jeans, baggy pants and more. Click Shop to explore.
         </p>
-        <a href="products.html" class="btn btn-primary">Shop Now</a>
+        <a class="btn btn-primary" href="products.html">Shop Now</a>
       </div>
-      <div class="hero-image">
-        <img
-          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
-          alt="Men's fashion collection"
-        />
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80" alt="mens fashion">
       </div>
     </section>
 
-    <!-- CATEGORIES SECTION -->
-    <section class="section">
-      <h2 class="section-title">Explore Men’s Categories</h2>
-      <div class="grid grid-4">
-        <article class="category-card">
-          <img
-            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
-            alt="T-shirt"
-          />
-          <h3>Basic T-Shirts</h3>
-          <p>Everyday cotton, oversized and graphic tees.</p>
-        </article>
-
-        <article class="category-card">
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
-            alt="Hoodie"
-          />
-          <h3>Hoodies & Sweatshirts</h3>
-          <p>Street style, oversized, zip-up and fleece hoodies.</p>
-        </article>
-
-        <article class="category-card">
-          <img
-            src="https://images.unsplash.com/photo-1528701800489-20be3c30c1d5?auto=format&fit=crop&w=600&q=80"
-            alt="Shirt"
-          />
-          <h3>Shirts</h3>
-          <p>Formal, casual checks, linen and party wear shirts.</p>
-        </article>
-
-        <article class="category-card">
-          <img
-            src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
-            alt="Jeans and pants"
-          />
-          <h3>Jeans & Baggy Pants</h3>
-          <p>Slim fit, relaxed fit, cargos and baggy streetwear pants.</p>
-        </article>
+    <section style="margin-top:18px">
+      <h2 style="margin-bottom:10px">Top Categories</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1; min-width:160px" class="card"><strong>T-Shirts</strong><div style="color:#9fb3cc">Everyday staples</div></div>
+        <div style="flex:1; min-width:160px" class="card"><strong>Hoodies</strong><div style="color:#9fb3cc">Cozy & street</div></div>
+        <div style="flex:1; min-width:160px" class="card"><strong>Shirts</strong><div style="color:#9fb3cc">Formal & casual</div></div>
+        <div style="flex:1; min-width:160px" class="card"><strong>Jeans & Pants</strong><div style="color:#9fb3cc">Slim to baggy</div></div>
       </div>
     </section>
 
-    <!-- HIGHLIGHT SECTION -->
-    <section class="section highlight">
-      <div class="highlight-content">
-        <h2>Outfits for Every Occasion</h2>
-        <p>
-          College, office, date nights, weekend trips or late-night drives —
-          MensHub covers the full range of men’s clothing styles.
-        </p>
-        <ul class="highlight-list">
-          <li>Minimal basics for daily wear</li>
-          <li>Smart casual fits for work and meetings</li>
-          <li>Street-style hoodies, cargos & baggy pants</li>
-          <li>Premium denim and layered looks</li>
-        </ul>
-        <a href="products.html" class="btn btn-outline">Browse Full Collection</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="main-footer">
-    <p>© 2025 MensHub Clothing. All rights reserved.</p>
-  </footer>
+    <footer style="margin-top:22px; color:#9fb3cc;">© 2025 MensHub Clothing</footer>
+  </div>
 
   <script>
-    // Update cart count from localStorage
+    // Utilities use the same key across pages
+    const CART_KEY = 'menshub_cart_v1';
+
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+      } catch (e) {
+        console.error('Parsing cart failed', e);
+        return [];
+      }
+    }
     function updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-      const cartCountEl = document.getElementById('cart-count');
-      if (cartCountEl) cartCountEl.textContent = count;
+      const cart = getCart();
+      const count = cart.reduce((s,i)=> s + (i.quantity||0), 0);
+      const el = document.getElementById('cart-count');
+      if (el) el.textContent = count;
     }
 
-    document.addEventListener('DOMContentLoaded', updateCartCount);
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount();
+    });
   </script>
 </body>
 </html>
